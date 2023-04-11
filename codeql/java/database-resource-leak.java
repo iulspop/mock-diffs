@@ -14,13 +14,11 @@ public class DatabaseManager {
     }
 
     public void executeQuery(String query) throws SQLException {
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery(query);
-        // do stuff with results
-        processResults(rs);
-
-        rs.close();
-        stmt.close();
+        try (Statement stmt = conn.createStatement()) {
+            ResultSet rs = stmt.executeQuery(query);
+            // do stuff with results
+            processResults(rs);
+        }
     }
 
     private void processResults(ResultSet rs) {
