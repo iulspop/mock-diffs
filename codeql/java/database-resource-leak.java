@@ -20,8 +20,6 @@ public class DatabaseManager {
         }
     }
 
-
-
     private void processResults(ResultSet rs) {
     }
 }
