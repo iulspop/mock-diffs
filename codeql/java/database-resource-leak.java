@@ -16,14 +16,9 @@ public class DatabaseManager {
     public void executeQuery(String query) throws SQLException {
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(query);
-        // do stuff with results
         processResults(rs);
-
-        rs.close();
-        stmt.close();
     }
 
     private void processResults(ResultSet rs) {
-        // Process the results from the query
     }
 }
