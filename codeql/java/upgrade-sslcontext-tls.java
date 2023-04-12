@@ -13,6 +13,6 @@ public class SecureSocketManager {
         
         return sslSocket;
     }
-    
+
     // Other methods related to the SSL socket management
 }
