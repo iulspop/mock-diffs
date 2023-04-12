@@ -15,7 +15,7 @@ public class MyServlet extends HttpServlet {
             String output = generateOutput(request);
             response.getWriter().write(output);
         } catch (Exception e) {
-            response.sendError(401, e.getMessage());
+            response.sendError(401);
         }
     }
 
