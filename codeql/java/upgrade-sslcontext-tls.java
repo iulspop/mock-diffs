@@ -10,7 +10,7 @@ public class SecureSocketManager {
         SSLSocketFactory factory = (SSLSocketFactory) SSLSocketFactory.getDefault();
         SSLSocket sslSocket = (SSLSocket) factory.createSocket(host, port);
         sslSocket.setEnabledProtocols(new String[] { "TLSv1.1" });
-        
+
         return sslSocket;
     }
 
