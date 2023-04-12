@@ -9,7 +9,7 @@ public class SecureSocketManager {
     public SSLSocket createSSLSocket(String host, int port) throws IOException {
         SSLSocketFactory factory = (SSLSocketFactory) SSLSocketFactory.getDefault();
         SSLSocket sslSocket = (SSLSocket) factory.createSocket(host, port);
-        sslSocket.setEnabledProtocols(new String[] { "TLSv1.1" });
+        sslSocket.setEnabledProtocols(new String[] { "TLSv1.2" });
 
         return sslSocket;
     }
